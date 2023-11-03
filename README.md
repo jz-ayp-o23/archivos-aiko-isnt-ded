@@ -129,7 +129,7 @@ Por ejemplo:
 ```python
 with (
     open("entrada.txt", "r") as f_in,
-    open("salida.txt, "w") as f_out
+    open("salida.txt", "w") as f_out
 ):
     for line in f_in:
         f_out.write(line)
