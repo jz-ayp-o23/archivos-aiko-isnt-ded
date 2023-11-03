@@ -1,4 +1,3 @@
-file = open("data/beatles.txt", "r", encoding="utf8")
-for line in file:
-    print(line.strip())
-file.close()
+with open("data/beatles.txt", "r", encoding="utf8") as file:
+    for line in file:
+        print(line.strip())
