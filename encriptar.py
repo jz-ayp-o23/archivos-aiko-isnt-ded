@@ -29,3 +29,17 @@ def encriptar_archivo(entrada, desplazamiento):
             for linea in f_in:
                 f_out.write(encriptar(linea, desplazamiento))
     return
+
+def desencriptar_archivo(entrada, desplazamiento):
+    """
+    Desencripta el archivo de entrada aplicando el desplazamiento indicado.
+    El archivo de salida tiene el mismo nombre que el de entrada más
+    la cadena: -DESCRIPTO.
+    """
+    archivo = Path(entrada)
+    salida = str(archivo.with_name(archivo.stem + "-DESCRIPTO" + archivo.suffix))
+    with open(archivo, "r", encoding="utf8") as f_in:
+        with open(salida, "w", encoding="utf8") as f_out:
+            for linea in f_in:
+                f_out.write(encriptar(linea, -(desplazamiento)))
+    return
