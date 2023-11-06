@@ -1,3 +1,10 @@
+"""
+A partir de un archivo con el nombre, apellido y calificaciones de estudiantes separados por un espacio,
+escribir otro archivo con el apellido, nombre y promedio de cada estudiante.
+Viviana Toledo De la Fuente
+05 de noviembre de 2023
+"""
+
 import numpy as np
 from pathlib import Path
 
